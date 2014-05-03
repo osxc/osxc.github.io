@@ -2,3 +2,8 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 200;
 }
+
+.count {
+  font-size: 5em;
+  text-align: center;
+}
