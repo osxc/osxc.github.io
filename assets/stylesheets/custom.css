@@ -7,3 +7,11 @@ body {
   font-size: 5em;
   text-align: center;
 }
+
+img {
+  width: 100%;
+  max-width: 150px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
