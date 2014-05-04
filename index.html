@@ -54,7 +54,7 @@
           <p>then, osxc wants almost everything to be accessible through git:</p>
           <pre>~/src/github.com/mxcl/homebrew/</pre>
           <p>of course, you should do like him !</p>
-          <pre>~/src/github.com/{your username}/</pre>
+          <pre>~/src/github.com/{your github username}/</pre>
         </div>
         <div class="col-md-3">
           <h2>install &amp; use</h2>
@@ -62,30 +62,46 @@
             <div class="col-xs-1 count">1</div>
             <div class="col-xs-11">
               <h3>fork xc-custom</h3>
+              <p>xc-custom will be your main configuration repository, unless you want to change a fundamental behavior in osxc, you'll always change xc-custom.</p>
+              <p><a class="btn btn-primary" href="//github.com/osxc/xc-custom/fork">fork it !</a></p>
             </div>
           </div>
           <div class="row">
             <div class="col-xs-1 count">2</div>
             <div class="col-xs-11">
               <h3>bootstrap osxc</h3>
+              <p>xc-boot is a very <a href="//github.com/osxc/xc-boot/blob/master/boot.sh">simple script</a> to get you started with osxc.</p>
+              <p>for now, as the software is not really stable, and especially this script, you should do the following:</p>
+              <pre>
+git clone https://github.com/osxc/xc-boot.git ~/src/github.com/osxc/xc-boot
+cd ~/src/github.com/osxc/xc-boot
+sh boot.sh github.com/{your github username}/xc-custom</pre>
             </div>
           </div>
           <div class="row">
             <div class="col-xs-1 count">3</div>
             <div class="col-xs-11">
               <h3>run ansible</h3>
+              <p>we don't want to hide ansible so it will be very straightforward if you already know ansible</p>
+              <pre>
+cd ~/src/github.com/{your github username}/xc-custom
+ansible-playbook all.yml</pre>
             </div>
           </div>
           <div class="row">
             <div class="col-xs-1 count">4</div>
             <div class="col-xs-11">
-              <h3>edit your fork</h3>
+              <h3>edit your xc-custom</h3>
+              <p>we just installed a few things for you, but now it's time to get your hands dirty !</p>
+              <p>don't worry, for most of the things you'll want to do, you'll just need to add a few lines in all.yml</p>
             </div>
           </div>
           <div class="row">
             <div class="col-xs-1 count">5</div>
             <div class="col-xs-11">
               <h3>repeat</h3>
+              <p>never "drag to install" anymore or forget your software configuration.</p>
+              <p>just repeat steps 4 and 3.</p>
             </div>
           </div>
         </div>
